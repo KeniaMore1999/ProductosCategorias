@@ -1,0 +1,25 @@
+extends base.pug
+
+block title
+    title Categorias
+
+block container
+    a.btn.btn-outline-warning(href='/' role='button') Back
+    .container.mt-5(style={width:'500px'})
+        h1 Modulo de Categorias
+        hr
+        form(action="/AgregarCategorias")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Agregar Categorias
+
+        form(action="/ActualizarCategorias")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-success Actualizar Categorias
+
+        form(action="/EliminarCategorias")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-danger Eliminar Categorias
+           

@@ -1,0 +1,20 @@
+extends base.pug
+
+block title
+    title Eliminar Categorias
+
+block container
+    a.btn.btn-outline-warning(href='/categorias' role='button') Back
+    .container.mt-5(style={width:'500px'})
+        h1 Eliminar una Categoria
+        hr
+        form(action="/EliminarCategorias" method="post")
+            .form-group
+                h5 Ingrese el id de la categoria a eliminar
+                label(for="Idcategoria") CategoriaId
+                input#Idcategoria.form-control(type="text" name="Idcategoria")
+
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-danger Eliminar
+           

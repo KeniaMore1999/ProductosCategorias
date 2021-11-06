@@ -1,0 +1,39 @@
+extends base.pug
+
+block title
+    title Actualizar Productos
+
+block container
+    a.btn.btn-outline-warning(href='/productos' role='button') Back
+    .container.mt-5(style={width:'500px'})
+        h1 Actualizacion de Productos
+        hr
+        form(action="/ActualizarProductos" method="post")
+            .form-group
+                label(for="Idproducto") Productoid
+                input#Idproducto.form-control(type="text" name="Idproducto")
+
+            .form-group.mt-3              
+                label(for="NombreProducto") Nombre del Producto
+                input#NombreProducto.form-control(type="text" name="NombreProducto")
+            
+            .form-group.mt-3
+                label(for="Descripcion") Descripcion
+                input#Descripcion.form-control(type="text" name="Descripcion")
+            
+            .form-group.mt-3
+                label(for="Cantidad") Cantidad
+                input#Cantidad.form-control(type="text" name="Cantidad")
+
+            .form-group.mt-3
+                label(for="Precio") Precio
+                input#Precio.form-control(type="text" name="Precio")
+
+            .form-group.mt-3
+                label(for="Existencia") Existencia
+                input#Existencia.form-control(type="text" name="Existencia")
+
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-success Actualizar
+           

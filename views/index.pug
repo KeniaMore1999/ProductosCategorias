@@ -1,0 +1,19 @@
+extends base.pug
+
+block title
+    title Welcome
+
+block container 
+    .container.mt-5(style={width:'350px'})
+        h1 Bienvenido
+        hr
+        form(action="/productos")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Ir a Productos
+
+        form(action="/categorias")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Ir a Categorias
+

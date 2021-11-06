@@ -1,0 +1,25 @@
+extends base.pug
+
+block title
+    title Productos
+
+block container
+    a.btn.btn-outline-warning(href='/' role='button') Back
+    .container.mt-5(style={width:'500px'})
+        h1 Modulo de Productos
+        hr
+        form(action="/AgregarProductos")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Agregar Productos
+
+        form(action="/ActualizarProductos")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-success Actualizar Productos
+
+        form(action="/EliminarProductos")
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-danger Eliminar Productos
+           

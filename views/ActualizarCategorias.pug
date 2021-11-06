@@ -1,0 +1,31 @@
+extends base.pug
+
+block title
+    title Actualizar Categorias
+
+block container
+    a.btn.btn-outline-warning(href='/categorias' role='button') Back
+    .container.mt-5(style={width:'500px'})
+        h1 Actualizacion de Categorias
+        hr
+        form(action="/ActualizarCategorias" method="post")
+            .form-group
+                label(for="Idcategoria") Categoriaid
+                input#Idcategoria.form-control(type="text" name="Idcategoria")
+
+            .form-group.mt-3              
+                label(for="NombreCategoria") Nombre de la Categoria
+                input#NombreCategoria.form-control(type="text" name="NombreCategoria")
+            
+            .form-group.mt-3
+                label(for="Descripcion") Descripcion
+                input#Descripcion.form-control(type="text" name="Descripcion")
+            
+            .form-group.mt-3
+                label(for="Area") Area
+                input#Area.form-control(type="text" name="Area")
+
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-success Actualizar
+           
